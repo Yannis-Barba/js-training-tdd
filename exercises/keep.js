@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /*
  * Create a `keepFirst` function that takes a string as parameter
@@ -14,8 +14,28 @@
 
 // Your code:
 
-//* Begin of tests
-const assert = require('assert');
+const keepFirst = (str) => str.slice(0, 2);
+const keepLast = (str) => str.slice(str.length - 2);
+const keepFirstLast = (str) => str.slice(2, 4);
 
-assert.fail('You must write your own tests');
+//* Begin of tests
+const assert = require("assert");
+const { type } = require("os");
+
+assert.strictEqual(typeof keepFirst, "function");
+assert.strictEqual(keepFirst.length, 1);
+assert.deepStrictEqual(keepFirst("ma string"), "ma");
+assert.deepStrictEqual(keepFirst("ma"), "ma");
+
+assert.strictEqual(typeof keepLast, "function");
+assert.strictEqual(keepLast.length, 1);
+assert.deepStrictEqual(keepLast("ma string"), "ng");
+assert.deepStrictEqual(keepLast("ma"), "ma");
+
+assert.strictEqual(typeof keepFirstLast, "function");
+assert.strictEqual(keepFirstLast.length, 1);
+assert.deepStrictEqual(keepFirstLast("ma string"), " s");
+assert.deepStrictEqual(keepFirstLast("string"), "ri");
+
+// assert.fail('You must write your own tests');
 // End of tests */
