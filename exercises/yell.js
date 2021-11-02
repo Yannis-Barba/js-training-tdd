@@ -17,6 +17,7 @@ assert.strictEqual(typeof yell, "function");
 assert.strictEqual(yell.length, 1);
 assert.deepStrictEqual(yell("ma string"), "MA STRING");
 assert.deepStrictEqual(yell("Ma String"), "MA STRING");
+assert.deepStrictEqual(yell("MA STRING"), "MA STRING");
 assert.deepStrictEqual(yell(" "), " ");
 
 // assert.fail('You must write your own tests');
